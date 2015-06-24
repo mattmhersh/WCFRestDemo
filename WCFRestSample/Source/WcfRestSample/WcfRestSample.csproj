@@ -100,12 +100,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\SampleDb.mdf" />
-    <Content Include="App_Data\SampleDb_log.ldf">
-      <DependentUpon>SampleDb.mdf</DependentUpon>
-    </Content>
     <Content Include="Global.asax" />
-    <Content Include="IBookService.svc" />
+    <Content Include="PlanService.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -118,25 +114,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
-    <Compile Include="BooksModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BooksModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IBookService.svc.cs">
-      <DependentUpon>IBookService.svc</DependentUpon>
+    <Compile Include="PlanService.svc.cs">
+      <DependentUpon>PlanService.svc</DependentUpon>
     </Compile>
-    <Compile Include="IBookService1.cs" />
+    <Compile Include="IPlanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="BooksModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BooksModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
