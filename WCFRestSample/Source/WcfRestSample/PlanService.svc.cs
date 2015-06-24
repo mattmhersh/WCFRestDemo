@@ -11,106 +11,41 @@ namespace WcfRestSample
     [Swaggerated("/PlanService.svc", "A RESTful WCF Service: Plan Services")]
     public class PlanService : IPlanService
     {
-        //public List<Book> GetBooksList()
-        //{
-        //    using (SampleDbEntities entities = new SampleDbEntities())
-        //    {
-        //        return entities.Books.ToList();
-        //    }
-        //}
-
-        public Plan GetPlanById(string id)
-        {
-            //try
-            //{
-            //    int bookId = Convert.ToInt32(id);
-
-            //    using (SampleDbEntities entities = new SampleDbEntities())
-            //    {
-            //        return entities.Books.SingleOrDefault(book => book.ID == bookId);
-            //    }
-            //}
-            //catch
-            //{
-            //    throw new FaultException("Something went wrong");
-            //}
-
-            return new Plan {Name = "Hi Frank", Id = Convert.ToInt32(id)};
-        }
-
-        //public void AddBook(string name)
-        //{
-        //    using (SampleDbEntities entities = new SampleDbEntities())
-        //    {
-        //        Book book = new Book { BookName = name };
-        //        entities.Books.AddObject(book);
-        //        entities.SaveChanges();
-        //    }
-        //}
-
-        //public void Add(RequestData Book)
-        //{
-        //    using (SampleDbEntities entities = new SampleDbEntities())
-        //    {
-        //        Book book = new Book {BookName = Book.Name};
-        //        entities.Books.AddObject(book);
-        //        entities.SaveChanges();
-        //    }
-        //}
-
-        //public void UpdateBook(string id, string name)
-        //{
-            //try
-            //{
-            //    int bookId = Convert.ToInt32(id);
-
-            //    using (SampleDbEntities entities = new SampleDbEntities())
-            //    {
-            //        Book book = entities.Books.SingleOrDefault(b => b.ID == bookId);
-            //        book.BookName = name;
-            //        entities.SaveChanges();
-            //    }
-            //}
-            //catch
-            //{
-            //    throw new FaultException("Something went wrong");
-            //}
-
-
-
-
-        //}
-
-        //public void DeleteBook(string id)
-        //{
-        //    try
-        //    {
-        //        int bookId = Convert.ToInt32(id);
-
-        //        using (SampleDbEntities entities = new SampleDbEntities())
-        //        {
-        //            Book book = entities.Books.SingleOrDefault(b => b.ID == bookId);
-        //            entities.Books.DeleteObject(book);
-        //            entities.SaveChanges();
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        throw new FaultException("Something went wrong");
-        //    }
-        //}
-
         [Description("Get Plan Names")]
         public List<string> GetPlanNames()
-        {            
-            var books = new List<Plan> {new Plan {Name = "ABC"}, new Plan() { Name = "DEF"}};
+        {
+            var books = new List<Plan> { 
+                new Plan { Name = "Plan A" }, 
+                new Plan { Name = "Plan B" } };
             return books.Select(plan => plan.Name).ToList();
         }
-    }
 
-    public class Plan
-    {
-        public string Name { get; set; }
-        public int Id { get; set; } 
+        [Description("Get Plan By ID")]
+        public Plan GetPlanById(string id)
+        {
+            return new Plan { Name = "Plan Name A", Id = Convert.ToInt32(id) };
+        }
+
+        [Description("Update Plan")]
+        public void UpdatePlan(string id, string name)
+        {
+            
+        }
+
+        [Description("Delete Plan")]
+        public void DeletePlan(string id)
+        {
+         
+        }
+
+        [Description("Add Plan")]
+        public void AddPlan(string name)
+        {            
+        }
+
+        public void Add(RequestData Plan)
+        {
+            
+        }
     }
 }
