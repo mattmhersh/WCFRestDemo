@@ -1,0 +1,10 @@
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\obj\Debug\SampleService.csprojResolveAssemblyReference.cache
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\bin\SampleService.dll.config
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\bin\SampleService.dll
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\bin\SampleService.pdb
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\bin\Swaggerator.dll
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\bin\Newtonsoft.Json.dll
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\bin\Swaggerator.pdb
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\bin\Newtonsoft.Json.xml
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\obj\Debug\SampleService.dll
+C:\Temp\Swaggeratr-master\Swaggeratr-master\src\SampleService\obj\Debug\SampleService.pdb
