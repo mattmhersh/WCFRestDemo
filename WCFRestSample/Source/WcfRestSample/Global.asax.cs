@@ -11,8 +11,7 @@ namespace WcfRestSample
         protected void Application_Start(object sender, EventArgs e)
         {            
             RouteTable.Routes.Add(new ServiceRoute("api-docs", new WebServiceHostFactory(), typeof(Discoverator)));
-
-
+            RouteTable.Routes.Add(new ServiceRoute("v1/plan", new WebServiceHostFactory(), typeof(PlanService)));
         }
 
         protected void Session_Start(object sender, EventArgs e)

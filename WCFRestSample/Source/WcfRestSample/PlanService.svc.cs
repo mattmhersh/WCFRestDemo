@@ -8,9 +8,13 @@ using Swaggerator.Attributes;
 namespace WcfRestSample
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
-    [Swaggerated("/PlanService.svc", "A RESTful WCF Service: Plan Services")]
+    [Swaggerated("/v1/plan", "Everything about your 401k Plan")]
     public class PlanService : IPlanService
     {
+        /// <summary>
+        /// Get Plan Names
+        /// </summary>
+        /// <returns></returns>
         [Description("Get Plan Names")]
         public List<string> GetPlanNames()
         {
@@ -26,26 +30,28 @@ namespace WcfRestSample
             return new Plan { Name = "Plan Name A", Id = Convert.ToInt32(id) };
         }
 
-        [Description("Update Plan")]
-        public void UpdatePlan(string id, string name)
-        {
+        //[Description("Update Plan")]
+        //public void UpdatePlan(string id, string name)
+        //{
             
-        }
+        //}
 
         [Description("Delete Plan")]
-        public void DeletePlan(string id)
+        public Plan DeletePlan(string id)
         {
-         
+            return new Plan { Name = "Plan Deleted", Id = Convert.ToInt32(id) };
         }
 
         [Description("Add Plan")]
-        public void AddPlan(string name)
-        {            
-        }
-
-        public void Add(RequestData Plan)
+        public void AddPlan(IPlan plan)
         {
             
+        }
+
+        [Description("Update Plan")]
+        public Plan UpdatePlan(IPlan plan)
+        {
+            return new Plan { Name = plan.Name, Id = plan.Id };            
         }
     }
 }

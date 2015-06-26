@@ -33,3 +33,4 @@ C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\bin\Newtonsoft.
 C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\bin\System.Net.Http.Formatting.xml
 C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\bin\System.Web.Http.xml
 C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\bin\System.Web.Http.WebHost.xml
+C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\bin\WcfRestSample.XML

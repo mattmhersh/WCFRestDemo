@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WcfRestSample</name>
+    </assembly>
+    <members>
+        <member name="T:WcfRestSample.IPlan">
+            <summary>
+             Plan Contract
+            </summary>
+        </member>
+        <member name="P:WcfRestSample.IPlan.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:WcfRestSample.IPlan.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="T:WcfRestSample.IPlanService">
+            <summary>
+            Plan
+            </summary>
+        </member>
+        <member name="M:WcfRestSample.IPlanService.GetPlanById(System.String)">
+            <summary>
+            Get Plan By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WcfRestSample.IPlanService.GetPlanNames">
+            <summary>
+            Get Plan Names
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WcfRestSample.IPlanService.AddPlan(WcfRestSample.IPlan)">
+            <summary>
+            Add Plan
+            </summary>
+            <param name="plan"></param>
+        </member>
+        <member name="M:WcfRestSample.IPlanService.UpdatePlan(WcfRestSample.IPlan)">
+            <summary>
+            Update Plan
+            </summary>
+            <param name="plan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WcfRestSample.IPlanService.DeletePlan(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WcfRestSample.PlanService.GetPlanNames">
+            <summary>
+            Get Plan Names
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
