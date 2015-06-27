@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Rk.Manager.Fp.Plan.PlanService" CodeBehind="PlanManager.svc.cs" %>

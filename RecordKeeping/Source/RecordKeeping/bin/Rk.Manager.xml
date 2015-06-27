@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rk.Manager</name>
+    </assembly>
+    <members>
+        <member name="T:Rk.Manager.IPlan">
+            <summary>
+             Plan Contract
+            </summary>
+        </member>
+        <member name="P:Rk.Manager.IPlan.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Rk.Manager.IPlan.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="T:Rk.Manager.PlanManager">
+            <summary>
+            Plan Manager
+            </summary>
+        </member>
+        <member name="T:Rk.Manager.IPlanManager">
+            <summary>
+            Plan
+            </summary>
+        </member>
+        <member name="M:Rk.Manager.IPlanManager.GetPlanNames">
+            <summary>
+            Get Plan Names
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rk.Manager.IPlanManager.GetPlanById(System.String)">
+            <summary>
+            Get Plan By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rk.Manager.IPlanManager.AddPlan(Rk.Manager.IPlan)">
+            <summary>
+            Add Plan
+            </summary>
+            <param name="plan"></param>
+        </member>
+        <member name="M:Rk.Manager.IPlanManager.UpdatePlan(Rk.Manager.IPlan)">
+            <summary>
+            Update Plan
+            </summary>
+            <param name="plan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rk.Manager.IPlanManager.DeletePlan(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rk.Manager.PlanManager.GetPlanNames">
+            <summary>
+            Get Plan Names
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
