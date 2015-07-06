@@ -39,12 +39,12 @@ namespace Rk.Manager
         [OperationContract]
         [ResponseCode(200, "OK")]
         [OperationSummary("Add Plan")]
-        [WebInvoke(UriTemplate = "Add",
-            Method = "POST",
-            RequestFormat = WebMessageFormat.Json,
-            ResponseFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.Bare)]
-        void AddPlan(IPlan plan);
+        //[WebInvoke(UriTemplate = "AddPlan",
+        //    Method = "POST",
+        //    RequestFormat = WebMessageFormat.Json,
+        //    ResponseFormat = WebMessageFormat.Json,
+        //    BodyStyle = WebMessageBodyStyle.Bare)]
+        Plan AddPlan(IPlan plan);
 
         /// <summary>
         /// Update Plan
@@ -53,11 +53,11 @@ namespace Rk.Manager
         /// <returns></returns>
         [OperationContract]
         [OperationSummary("Update Plan")]
-        [WebInvoke(UriTemplate = "Update",
-            Method = "PUT",
-            RequestFormat = WebMessageFormat.Json,
-            ResponseFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.Bare)]
+        //[WebInvoke(UriTemplate = "UpdatePlan",
+        //    Method = "PUT",
+        //    RequestFormat = WebMessageFormat.Json,
+        //    ResponseFormat = WebMessageFormat.Json,
+        //    BodyStyle = WebMessageBodyStyle.Bare)]
         Plan UpdatePlan(IPlan plan);
 
         /// <summary>
@@ -67,11 +67,11 @@ namespace Rk.Manager
         /// <returns></returns>
         [OperationContract]
         [OperationSummary("Delete Plan")]
-        [WebInvoke(UriTemplate = "Delete/{id}",
-            Method = "DELETE",
-            RequestFormat = WebMessageFormat.Json,
-            ResponseFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.Bare)]
+        //[WebInvoke(UriTemplate = "DeletePlan/{id}",
+        //    Method = "DELETE",
+        //    RequestFormat = WebMessageFormat.Json,
+        //    ResponseFormat = WebMessageFormat.Json,
+        //    BodyStyle = WebMessageBodyStyle.Bare)]
         Plan DeletePlan(string id);  
     }
 }

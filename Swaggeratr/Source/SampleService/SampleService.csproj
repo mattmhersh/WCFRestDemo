@@ -63,26 +63,6 @@
     <Content Include="Global.asax" />
     <Content Include="RESTful.svc" />
     <Content Include="SecondaryService.svc" />
-    <Content Include="swagger-ui\dist\api-docs.js" />
-    <Content Include="swagger-ui\dist\css\hightlight.default.css" />
-    <Content Include="swagger-ui\dist\css\screen.css" />
-    <Content Include="swagger-ui\dist\images\logo_small.png" />
-    <Content Include="swagger-ui\dist\images\pet_store_api.png" />
-    <Content Include="swagger-ui\dist\images\throbber.gif" />
-    <Content Include="swagger-ui\dist\images\wordnik_api.png" />
-    <Content Include="swagger-ui\dist\index.html" />
-    <Content Include="swagger-ui\dist\lib\backbone-min.js" />
-    <Content Include="swagger-ui\dist\lib\handlebars-1.0.rc.1.js" />
-    <Content Include="swagger-ui\dist\lib\highlight.7.3.pack.js" />
-    <Content Include="swagger-ui\dist\lib\jquery-1.8.0.min.js" />
-    <Content Include="swagger-ui\dist\lib\jquery.ba-bbq.min.js" />
-    <Content Include="swagger-ui\dist\lib\jquery.slideto.min.js" />
-    <Content Include="swagger-ui\dist\lib\jquery.wiggle.min.js" />
-    <Content Include="swagger-ui\dist\lib\swagger.js" />
-    <Content Include="swagger-ui\dist\lib\underscore-min.js" />
-    <Content Include="swagger-ui\dist\rest.js" />
-    <Content Include="swagger-ui\dist\swagger-ui.js" />
-    <Content Include="swagger-ui\dist\swagger-ui.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -102,9 +82,7 @@
       <DependentUpon>SecondaryService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

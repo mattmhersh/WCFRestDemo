@@ -11,7 +11,7 @@ namespace Rk.Manager
     /// Plan Manager
     /// </summary>
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
-    [Swaggerated("/v1/planmanager", "Everything about your 401k Plan")]
+    [Swaggerated("/PlanManager", "Everything about your 401k Plan")]
     public class PlanManager : IPlanManager
     {
         /// <summary>
@@ -40,9 +40,9 @@ namespace Rk.Manager
         }
 
         [Description("Add Plan")]
-        public void AddPlan(IPlan plan)
+        public Plan AddPlan(IPlan plan)
         {
-
+            return new Plan { Name = "Plan Added", Id = plan.Id };
         }
 
         [Description("Update Plan")]

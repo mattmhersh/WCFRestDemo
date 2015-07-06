@@ -135,13 +135,24 @@ namespace Swaggerator
 				if (methodTags.Any(HiddenTags.Contains)) { continue; }
 
 				//find the WebGet/Invoke attributes, or skip if neither is present
-				WebGetAttribute wg = declaration.GetCustomAttribute<WebGetAttribute>();
-				WebInvokeAttribute wi = declaration.GetCustomAttribute<WebInvokeAttribute>();
-				if (wg == null && wi == null) { continue; }
+				//WebGetAttribute wg = declaration.GetCustomAttribute<WebGetAttribute>();
+				//WebInvokeAttribute wi = declaration.GetCustomAttribute<WebInvokeAttribute>();
+				//if (wg == null && wi == null) { continue; }
 
-				string httpMethod = (wi == null) ? "GET" : wi.Method;
+				//string httpMethod = (wi == null) ? "GET" : wi.Method;
+				//string uriTemplate = (wi == null) ? wg.UriTemplate ?? "" : wi.UriTemplate ?? "";
 
-				string uriTemplate = (wi == null) ? wg.UriTemplate ?? ""  : wi.UriTemplate ?? "";
+				var httpMethod = GetHttpMethodUsingConventions(declaration.Name);
+				var param = declaration.GetParameters();
+				var uriTemplate = declaration.Name;
+				if (declaration.Name.ToUpper().Contains("GET") || declaration.Name.ToUpper().Contains("DELETE"))
+				{
+					if (param.Any())
+					{
+						uriTemplate = param.Aggregate(uriTemplate,
+							(current, parameterInfo) => current + ("/{" + parameterInfo.Name.ToLower() + "}"));
+					}
+				}
 
 				//implementation description overrides interface description
 				string description =
@@ -267,6 +278,40 @@ namespace Swaggerator
 
 				yield return new Tuple<string, Operation>(pathToReturn, operation);
 			}
+		}
+
+		private static string GetHttpMethodUsingConventions(string name)
+		{
+			/*
+					   * 
+					   * Create -> Add -> Post
+						  Read -> Get -> Get
+						  Update -> Update -> Put
+						  Delete -> Delete -> Delete
+					   */
+			var webMethod = "";
+
+			if (name.ToUpper().Contains("ADD"))
+			{
+				webMethod = "POST";
+			}
+
+			if (name.ToUpper().Contains("GET"))
+			{
+				webMethod = "GET"; 
+			}
+
+			if (name.ToUpper().Contains("UPDATE"))
+			{
+				webMethod = "PUT";
+			}
+
+			if (name.ToUpper().Contains("DELETE"))
+			{
+				webMethod = "DELETE";
+			}
+			
+			return webMethod;
 		}
 
 		private IEnumerable<string> GetContentTypes<T>(MethodInfo implementation, MethodInfo declaration) where T : ContentTypeAttribute

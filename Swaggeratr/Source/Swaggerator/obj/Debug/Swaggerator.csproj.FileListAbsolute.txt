@@ -5,3 +5,10 @@ C:\Temp\Swaggeratr-master\Swaggeratr-master\src\Swaggerator\bin\Debug\Newtonsoft
 C:\Temp\Swaggeratr-master\Swaggeratr-master\src\Swaggerator\obj\Debug\Swaggerator.csprojResolveAssemblyReference.cache
 C:\Temp\Swaggeratr-master\Swaggeratr-master\src\Swaggerator\obj\Debug\Swaggerator.dll
 C:\Temp\Swaggeratr-master\Swaggeratr-master\src\Swaggerator\obj\Debug\Swaggerator.pdb
+C:\develop\github\WCFRestDemo\Swaggeratr\Source\Swaggerator\bin\Debug\Swaggerator.dll
+C:\develop\github\WCFRestDemo\Swaggeratr\Source\Swaggerator\bin\Debug\Swaggerator.pdb
+C:\develop\github\WCFRestDemo\Swaggeratr\Source\Swaggerator\bin\Debug\Newtonsoft.Json.dll
+C:\develop\github\WCFRestDemo\Swaggeratr\Source\Swaggerator\bin\Debug\Newtonsoft.Json.xml
+C:\develop\github\WCFRestDemo\Swaggeratr\Source\Swaggerator\obj\Debug\Swaggerator.csprojResolveAssemblyReference.cache
+C:\develop\github\WCFRestDemo\Swaggeratr\Source\Swaggerator\obj\Debug\Swaggerator.dll
+C:\develop\github\WCFRestDemo\Swaggeratr\Source\Swaggerator\obj\Debug\Swaggerator.pdb
