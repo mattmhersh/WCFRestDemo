@@ -7,17 +7,10 @@ using Swaggerator.Attributes;
 
 namespace Rk.Manager
 {
-    /// <summary>
-    /// Plan Manager
-    /// </summary>
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
     [Swaggerated("/PlanManager", "Everything about your 401k Plan")]
     public class PlanManager : IPlanManager
     {
-        /// <summary>
-        /// Get Plan Names
-        /// </summary>
-        /// <returns></returns>
         [Description("Get Plan Names")]
         public List<string> GetPlanNames()
         {
@@ -37,6 +30,17 @@ namespace Rk.Manager
         public Plan DeletePlan(string id)
         {
             return new Plan { Name = "Plan Deleted", Id = Convert.ToInt32(id) };
+        }
+
+        [Description("Load Plan")]
+        public LoadedPlan LoadPlan(IPlanLoadRequest planRequest)
+        {
+            return new LoadedPlan {
+                LoadMessage = "Success", 
+                Plan = new GeneralPlanInfo
+                {
+                    Name = planRequest.GenPlanIDSys
+                }};
         }
 
         [Description("Add Plan")]

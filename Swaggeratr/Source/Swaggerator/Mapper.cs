@@ -135,24 +135,24 @@ namespace Swaggerator
 				if (methodTags.Any(HiddenTags.Contains)) { continue; }
 
 				//find the WebGet/Invoke attributes, or skip if neither is present
-				//WebGetAttribute wg = declaration.GetCustomAttribute<WebGetAttribute>();
-				//WebInvokeAttribute wi = declaration.GetCustomAttribute<WebInvokeAttribute>();
-				//if (wg == null && wi == null) { continue; }
+                //WebGetAttribute wg = declaration.GetCustomAttribute<WebGetAttribute>();
+                //WebInvokeAttribute wi = declaration.GetCustomAttribute<WebInvokeAttribute>();
+                //if (wg == null && wi == null) { continue; }
 
-				//string httpMethod = (wi == null) ? "GET" : wi.Method;
-				//string uriTemplate = (wi == null) ? wg.UriTemplate ?? "" : wi.UriTemplate ?? "";
+                //string httpMethod = (wi == null) ? "GET" : wi.Method;
+                //string uriTemplate = (wi == null) ? wg.UriTemplate ?? "" : wi.UriTemplate ?? "";
 
-				var httpMethod = GetHttpMethodUsingConventions(declaration.Name);
-				var param = declaration.GetParameters();
-				var uriTemplate = declaration.Name;
-				if (declaration.Name.ToUpper().Contains("GET") || declaration.Name.ToUpper().Contains("DELETE"))
-				{
-					if (param.Any())
-					{
-						uriTemplate = param.Aggregate(uriTemplate,
-							(current, parameterInfo) => current + ("/{" + parameterInfo.Name.ToLower() + "}"));
-					}
-				}
+                var httpMethod = GetHttpMethodUsingConventions(declaration.Name);
+                var param = declaration.GetParameters();
+                var uriTemplate = declaration.Name;
+                if (declaration.Name.ToUpper().Contains("GET") || declaration.Name.ToUpper().Contains("DELETE"))
+                {
+                    if (param.Any())
+                    {
+                        uriTemplate = param.Aggregate(uriTemplate,
+                            (current, parameterInfo) => current + ("/{" + parameterInfo.Name.ToLower() + "}"));
+                    }
+                }
 
 				//implementation description overrides interface description
 				string description =
@@ -289,7 +289,7 @@ namespace Swaggerator
 						  Update -> Update -> Put
 						  Delete -> Delete -> Delete
 					   */
-			var webMethod = "";
+            var webMethod = "POST";
 
 			if (name.ToUpper().Contains("ADD"))
 			{

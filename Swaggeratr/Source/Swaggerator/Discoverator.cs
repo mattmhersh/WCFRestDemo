@@ -18,6 +18,7 @@
  */
 
 
+using System.ServiceModel.Web;
 using Swaggerator.Attributes;
 using System;
 using System.Collections.Generic;
@@ -88,6 +89,8 @@ namespace Swaggerator
 
 			MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(serviceList)));
 
+            WebOperationContext.Current.OutgoingResponse.ContentType = "application/json";
+
 			return stream;
 		}
 
@@ -139,6 +142,7 @@ namespace Swaggerator
 
 		public Stream GetServiceDetails(string servicePath)
 		{
+
 			return GetServiceDetails(AppDomain.CurrentDomain, HttpContext.Current.Request.Url, servicePath);
 		}
 
@@ -151,6 +155,9 @@ namespace Swaggerator
 			string api = _Serializer.WriteApi(baseUri, string.Format("/{0}", servicePath), serviceType, typeStack);
 
 			MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(api));
+
+            WebOperationContext.Current.OutgoingResponse.ContentType = "application/json";
+
 			return ms;
 		}
 	}

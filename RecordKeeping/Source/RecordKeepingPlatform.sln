@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rk.Manager", "RecordKeeping\Rk.Manager.csproj", "{8425A61B-C4FD-4B15-854E-94C2CC513668}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swaggerator", "..\..\Swaggeratr\Source\Swaggerator\Swaggerator.csproj", "{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8425A61B-C4FD-4B15-854E-94C2CC513668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8425A61B-C4FD-4B15-854E-94C2CC513668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8425A61B-C4FD-4B15-854E-94C2CC513668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

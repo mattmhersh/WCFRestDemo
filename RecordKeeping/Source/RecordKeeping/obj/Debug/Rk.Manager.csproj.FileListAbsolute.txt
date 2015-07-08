@@ -29,7 +29,6 @@ C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\bin\ServiceStac
 C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\obj\Debug\Rk.Manager.dll
 C:\develop\github\WCFRestDemo\WCFRestSample\Source\WcfRestSample\obj\Debug\Rk.Manager.pdb
 C:\develop\github\WCFRestDemo\RecordKeeping\Source\RecordKeeping\bin\Rk.Manager.dll.config
-C:\develop\github\WCFRestDemo\RecordKeeping\Source\RecordKeeping\bin\Rk.Manager.xml
 C:\develop\github\WCFRestDemo\RecordKeeping\Source\RecordKeeping\bin\Rk.Manager.dll
 C:\develop\github\WCFRestDemo\RecordKeeping\Source\RecordKeeping\bin\Rk.Manager.pdb
 C:\develop\github\WCFRestDemo\RecordKeeping\Source\RecordKeeping\bin\Ifx.ServiceModelEx.dll
